@@ -6,6 +6,11 @@
 build/
 DerivedData/
 
+## Keys
+ThisDay/keys.swift
+/ThisDay/keys.swift
+*/keys.swift
+
 ## Various settings
 *.pbxuser
 !default.pbxuser
