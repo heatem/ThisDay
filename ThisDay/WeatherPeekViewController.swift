@@ -59,7 +59,7 @@ class WeatherPeekViewController: UIViewController, UITableViewDelegate, UITableV
             let high = (((weatherData["daily"] as? NSDictionary)?["data"] as? NSArray)?[indexPath.row + 1] as? NSDictionary)?["temperatureHigh"] as? Double,
             let low = (((weatherData["daily"] as? NSDictionary)?["data"] as? NSArray)?[indexPath.row + 1] as? NSDictionary)?["temperatureLow"] as? Double {
             
-            precipChance = String(Int(round(precipChanceDouble)))
+            precipChance = String(Int(round(precipChanceDouble * 100)))
             dailyHigh = String(Int(round(high)))
             dailyLow = String(Int(round(low)))
             
@@ -67,15 +67,19 @@ class WeatherPeekViewController: UIViewController, UITableViewDelegate, UITableV
         
         cell?.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         cell?.textLabel?.textColor = UIColor.white
-        cell?.textLabel?.font = UIFont.monospacedDigitSystemFont(ofSize: 16.00, weight: 1.00)
+        cell?.textLabel?.font = UIFont.monospacedDigitSystemFont(ofSize: 14.00, weight: 1.00)
         cell?.detailTextLabel?.textColor = UIColor.white
-        cell?.detailTextLabel?.font = UIFont.monospacedDigitSystemFont(ofSize: 16.00, weight: 1.00)
+        cell?.detailTextLabel?.font = UIFont.monospacedDigitSystemFont(ofSize: 14.00, weight: 1.00)
         
         cell?.textLabel?.textAlignment = .left
         cell?.textLabel?.text = weekday
         
+     
+        
         cell?.detailTextLabel?.textAlignment = .right
-        cell?.detailTextLabel?.text = "\(dailyHigh)°F | \(dailyLow)°F | Precip: \(precipChance)%"
+        let precipIcon = NSMutableAttributedString(string: "\(dailyHigh)°F | \(dailyLow)°F | r: \(precipChance)%")
+        precipIcon.addAttribute(NSFontAttributeName, value: UIFont(name: "ThisDay", size: 14)!, range: NSMakeRange(0,precipIcon.length))
+        cell?.detailTextLabel?.attributedText = precipIcon
         
         return cell!
     }
@@ -91,37 +95,21 @@ class WeatherPeekViewController: UIViewController, UITableViewDelegate, UITableV
         if let dailyHigh = (((weatherData["daily"] as? NSDictionary)?["data"] as? NSArray)?[0] as? NSDictionary)?["temperatureHigh"] as? Double,
             let dailyLow = (((weatherData["daily"] as? NSDictionary)?["data"] as? NSArray)?[0] as? NSDictionary)?["temperatureLow"] as? Double,
             let weatherDesc = (((weatherData["daily"] as? NSDictionary)?["data"] as? NSArray)?[0] as? NSDictionary)?["summary"] as? String,
-            let precipChance = (((weatherData["daily"] as? NSDictionary)?["data"] as? NSArray)?[0] as? NSDictionary)?["precipProbability"] as? Int {
-            
+            let precipChance = (((weatherData["daily"] as? NSDictionary)?["data"] as? NSArray)?[0] as? NSDictionary)?["precipProbability"] as? Double {
             dailyHighTemp = String(Int(round(dailyHigh)))
             dailyLowTemp = String(Int(round(dailyLow)))
             weatherDescription = weatherDesc
-            precipitationChance = String(precipChance)
+            precipitationChance = String(Int(precipChance * 100))
         }
-
 
         highTempLabel.text = "\(dailyHighTemp)°F"
         lowTempLabel.text = "\(dailyLowTemp)°F"
         weatherDescriptionLabel.text = weatherDescription
         precipitationChanceLabel.text = "Precipitation: \(precipitationChance)%"
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
