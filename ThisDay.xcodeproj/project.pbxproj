@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AE365EB61F2D904F00EEBE31 /* ThisDay.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AEFE9F0D1F2D8F080017E00A /* ThisDay.ttf */; };
 		AE365EB81F2DAF2700EEBE31 /* keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE365EB71F2DAF2700EEBE31 /* keys.swift */; };
 		AE375C8F1F2B1F9900C3594C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE375C8E1F2B1F9900C3594C /* AppDelegate.swift */; };
 		AE375C911F2B1F9900C3594C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE375C901F2B1F9900C3594C /* ViewController.swift */; };
@@ -16,12 +15,14 @@
 		AE375C991F2B1F9900C3594C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE375C981F2B1F9900C3594C /* Assets.xcassets */; };
 		AE375C9C1F2B1F9900C3594C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE375C9A1F2B1F9900C3594C /* LaunchScreen.storyboard */; };
 		AE5159EB1F4E1F6500471302 /* LandsEnd.png in Resources */ = {isa = PBXBuildFile; fileRef = AE5159EA1F4E1F6500471302 /* LandsEnd.png */; };
+		AE77F6941F78CFC100C918BD /* ThisDay.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE00ECCE1F78CB2F00C183B2 /* ThisDay.ttf */; };
 		AE85193E1F3E5FF0009793E2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE85193D1F3E5FF0009793E2 /* CoreLocation.framework */; };
 		AEF5C5B31F6339BF005C5FD2 /* WeatherPeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF5C5B21F6339BF005C5FD2 /* WeatherPeekViewController.swift */; };
 		AEF77C791F4F6BF5004782A5 /* PoweredByDarkSky.png in Resources */ = {isa = PBXBuildFile; fileRef = AEF77C781F4F6BF5004782A5 /* PoweredByDarkSky.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE00ECCE1F78CB2F00C183B2 /* ThisDay.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ThisDay.ttf; path = ../../../../Downloads/ThisDay/fonts/ThisDay.ttf; sourceTree = "<group>"; };
 		AE365EB71F2DAF2700EEBE31 /* keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = keys.swift; sourceTree = "<group>"; };
 		AE375C8E1F2B1F9900C3594C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE375C901F2B1F9900C3594C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,7 +36,6 @@
 		AEF5C5B21F6339BF005C5FD2 /* WeatherPeekViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherPeekViewController.swift; sourceTree = "<group>"; };
 		AEF77C781F4F6BF5004782A5 /* PoweredByDarkSky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PoweredByDarkSky.png; sourceTree = "<group>"; };
 		AEFE9F0B1F2D8EB50017E00A /* ThisDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThisDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AEFE9F0D1F2D8F080017E00A /* ThisDay.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThisDay.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +71,8 @@
 				AE375C981F2B1F9900C3594C /* Assets.xcassets */,
 				AE375C9A1F2B1F9900C3594C /* LaunchScreen.storyboard */,
 				AE375C9D1F2B1F9900C3594C /* Info.plist */,
+				AE00ECCE1F78CB2F00C183B2 /* ThisDay.ttf */,
 				AE375C951F2B1F9900C3594C /* ThisDay.xcdatamodeld */,
-				AEFE9F0D1F2D8F080017E00A /* ThisDay.ttf */,
 				AE365EB71F2DAF2700EEBE31 /* keys.swift */,
 			);
 			path = ThisDay;
@@ -154,12 +154,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE365EB61F2D904F00EEBE31 /* ThisDay.ttf in Resources */,
 				AEF77C791F4F6BF5004782A5 /* PoweredByDarkSky.png in Resources */,
 				AE375C9C1F2B1F9900C3594C /* LaunchScreen.storyboard in Resources */,
 				AE375C991F2B1F9900C3594C /* Assets.xcassets in Resources */,
 				AE375C941F2B1F9900C3594C /* Main.storyboard in Resources */,
 				AE5159EB1F4E1F6500471302 /* LandsEnd.png in Resources */,
+				AE77F6941F78CFC100C918BD /* ThisDay.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
